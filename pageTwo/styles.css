@@ -1,0 +1,110 @@
+@font-face{
+    src: url('../fonts/Roboto-Regular.ttf');
+    font-family: Roboto-Regular;
+}
+@font-face {
+    src: url('../fonts/Roboto-Bold.ttf');
+    font-family: Roboto-Bold;
+}
+
+:root {
+    --clr-primary: hsl(4, 100%, 67%);
+    --clr-blue-700: hsl(235, 18%, 26%);
+    --clr-blue-800: hsl(234, 29%, 20%);
+    --clr-grey: hsl(0, 0%,58%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --fweight-400: Roboto-Regular;
+    --fweight-700: Roboto-Bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    font-family: var(--fweight-400), sans-serif;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    overflow-wrap: break-word;
+    line-height: 1.5rem;
+    color: var(--clr-blue-700);
+    min-height: 100dvh;
+}
+
+.success {
+    width: 4em;
+    height: 4em;
+    margin: 2em 0 1em 0;
+}
+
+main{
+    padding: min(3rem, 8%);
+}
+
+h1 {
+    font-family: var(--fweight-700);
+    font-size: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem);
+    line-height: 0.97em;
+    margin: 0.6em 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+.dismiss {
+    display: grid;
+    width: 100%;
+    height: 3em;
+    margin: 3em 0 1em 0;
+    text-align: center;
+    align-content: center;
+    background-color:var(--clr-blue-800);
+    border-radius: 0.5em;
+}
+@media (width<40rem) {
+    .dismiss{
+        margin-top: 70%;
+    }
+}
+
+.dismiss:hover{
+    background-color: var(--clr-primary);
+    box-shadow: 0em 0.5em 2em 0em var(--clr-primary) ;
+}
+
+.attribution {
+    text-align: center;
+}
+.attribution a{
+    color: var(--clr-primary);
+}
+
+@media ( min-width: 40rem) {
+    
+    body {
+        background-color: var(--clr-blue-700);
+    }
+
+    .success{
+        margin: 0;
+    }
+
+    main{
+        margin-block: 5%;
+        width: 30rem;
+        height: 30rem;
+        background-color: var(--clr-white);
+        border-radius: 1em;
+        box-shadow: 0em 1em 1em 0em rgba(50, 50, 50, 0.7) ;
+    }
+
+    .attribution {
+        color: var(--clr-white);
+    }
+}
