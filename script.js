@@ -11,7 +11,7 @@ let emailForm = document.forms["emailForm"];
             let emailValue = emailInput.value;
             localStorage.setItem('email-Value', emailValue);
     
-            window.location.href = '../page-two/success.html';
+            window.location.href = 'pageTwo/success.html';
         });
 
         let subscribe = document.getElementById("Subscribe");
