@@ -1,6 +1,6 @@
 const emailForm = document.forms["emailForm"];
-let emailInput = document.getElementById("emailInput");
-let validError = document.getElementById("validError");
+const emailInput = document.getElementById("emailInput");
+const valid = document.getElementById("valid");
 const emailPattern = /^[A-Za-z\._\-0-9]*[@]{A-Za-z]*[\.][a-z]{2,4}$/;
 
 
@@ -11,7 +11,7 @@ const emailPattern = /^[A-Za-z\._\-0-9]*[@]{A-Za-z]*[\.][a-z]{2,4}$/;
             let emailValue = emailInput.value;
             localStorage.setItem('email-Value', emailValue);
     
-            window.location.href = 'pageTwo/success.html';
+            window.location.href = 'success.html';
         });
 
         let subscribe = document.getElementById("Subscribe");
@@ -20,9 +20,10 @@ const emailPattern = /^[A-Za-z\._\-0-9]*[@]{A-Za-z]*[\.][a-z]{2,4}$/;
 
             let emailValue = emailInput.value;
             if(emailValue.match(emailPattern)){
-                validError.innerHTML = "Email required";  
+                valid.className = "";
+                emailInput.className = "";
             }
             else{
-                emailInput.style.border = "0.1em solid #ff6257";
-                validError.innerHTML = "Valid email required";
+                emailInput.className = "error";
+                valid.className = "error";
             }};

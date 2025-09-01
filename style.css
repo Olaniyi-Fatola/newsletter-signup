@@ -57,7 +57,11 @@ h1{
     justify-content: space-between;
     font-family: var(--fweight-700);
 }
-#validError {
+#valid{
+    display: none;
+}
+#valid.error {
+    display: block;
     color: var(--clr-primary);
 }
 
@@ -91,6 +95,11 @@ h1{
     border-width: 0.1em;
     border-style: solid;
     border-color: var(--clr-grey);
+}
+
+#emailInput.error{
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
 }
 
 .contents{
