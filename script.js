@@ -1,7 +1,7 @@
-let emailForm = document.forms["emailForm"];
-        let emailInput = document.getElementById("emailInput");
-        let validError = document.getElementById("validError");
-        let emailPattern = /^[A-Za-z\._\-0-9]*[@]{A-Za-z]*[\.][a-z]{2,4}$/;
+const emailForm = document.forms["emailForm"];
+let emailInput = document.getElementById("emailInput");
+let validError = document.getElementById("validError");
+const emailPattern = /^[A-Za-z\._\-0-9]*[@]{A-Za-z]*[\.][a-z]{2,4}$/;
 
 
         emailForm.addEventListener('submit', function(e){
