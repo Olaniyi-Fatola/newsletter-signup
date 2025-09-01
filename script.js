@@ -20,7 +20,7 @@ const emailPattern = /^[A-Za-z\._\-0-9]*[@]{A-Za-z]*[\.][a-z]{2,4}$/;
 
             let emailValue = emailInput.value;
             if(emailValue.match(emailPattern)){
-                validError.innerHTML = "";  
+                validError.innerHTML = "Email required";  
             }
             else{
                 emailInput.style.border = "0.1em solid #ff6257";
