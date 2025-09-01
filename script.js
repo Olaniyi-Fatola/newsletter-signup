@@ -14,16 +14,24 @@ const emailPattern = /^[A-Za-z\._\-0-9]*[@]{A-Za-z]*[\.][a-z]{2,4}$/;
             window.location.href = 'success.html';
         });
 
-        let subscribe = document.getElementById("Subscribe");
 
-        subscribe.onclick = function errorMessage(){
-
+        function errorMessage(){
             let emailValue = emailInput.value;
-            if(emailValue.match(emailPattern)){
-                valid.className = "";
-                emailInput.className = "";
+
+            if(!emailValue.match(emailPattern)){
+                valid.className = "error";
+                emailInput.className = "error";
             }
             else{
-                emailInput.className = "error";
-                valid.className = "error";
-            }};
+                emailInput.className = "";
+                valid.className = "";
+                return true;
+            }
+            
+        };
+        emailForm.addEventListener("click",errorMessage);
+        
+
+        
+
+
